@@ -33,6 +33,7 @@ public class MemberController {
     @Autowired
     CouponFeignService couponFeignService;
 
+    @RequestMapping("/couponlist")
     public R listCoupon(){
         R memberCoupon = couponFeignService.getMemberCoupon();
         MemberEntity entity = new MemberEntity();
